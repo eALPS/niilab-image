@@ -26,6 +26,7 @@ cat <<EOF | tee ~/.local/share/code-server/User/settings.json
             }
     ]
     
-    }
+    },
+    "workbench.colorTheme": "Default Dark+"
 }
 EOF
