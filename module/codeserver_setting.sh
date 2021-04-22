@@ -22,7 +22,7 @@ cat <<EOF | tee ~/.local/share/code-server/User/settings.json
             {
                 "match": ".*",
                 "isAsync": true,
-                "cmd": ""
+                "cmd": "logger -t code-server[ealplus] ${file} save"
             }
     ]
     
