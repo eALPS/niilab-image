@@ -11,6 +11,7 @@ chmod -R +x ./module
 ./module/container_setting.sh
 ./module/trema_install.sh
 ./module/send_syslog_setting.sh
+./module/bash_setting.sh
 
 # 演習ファイルの配置
 sudo cp -r ./trema /workspace
