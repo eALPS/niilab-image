@@ -18,6 +18,12 @@ jobs:
           echo REPOSITORY_OWNER=$(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]') >> $GITHUB_ENV
           echo IMAGE_REPOSITORY=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]') >> $GITHUB_ENV
           echo IMAGE_TAG=$(echo ${{ github.ref }} | tr '[:upper:]' '[:lower:]' | awk '{split($0,a,"/"); print a[3]}') >> $GITHUB_ENV
+      - 
+        name: install openvswitch
+        run: |
+          sudo apt update
+          sudo apt install  openvswitch-switch -y
+          sudo apt install  openvswitch-common -y
       -
         name: install lxd
         run: |
