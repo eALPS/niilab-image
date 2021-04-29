@@ -7,7 +7,7 @@ module(load="imtcp")
 input(type="imtcp" port="514")
 :programname, isequal, "code-server"    -/var/log/code-server/action.log
 EOF
-sudo  systemctl restart rsyslog.service
+sudo systemctl restart rsyslog.service
 
 cat <<EOF | sudo tee /etc/logrotate.d/code-server 
 /var/log/code-server/action.log{
@@ -20,3 +20,4 @@ cat <<EOF | sudo tee /etc/logrotate.d/code-server
     rotate 999999999
 }
 EOF
+sudo systemctl restart logrotate
