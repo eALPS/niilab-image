@@ -19,6 +19,7 @@ chmod -R +x ./module
 
 
 #lxdをインストールする
+<< COMMENTOUT
 sudo apt install  zfsutils-linux -y
 sudo snap install lxd
 sudo snap install lxd --channel=latest/stable
@@ -35,9 +36,9 @@ sudo docker run \
   --privileged \
   --device=/dev/kmsg \
   gcr.io/cadvisor/cadvisor
-docker run -d --name=grafana -p 3020:3000 grafana/grafana
-sudo apt install 
-sudo apt install prometheus -y
+#docker run -d --name=grafana -p 3020:3000 grafana/grafana
+#sudo apt install 
+#sudo apt install prometheus -y
 #  - job_name: cadvisor
 #    # metrics_path defaults to '/metrics'
 #    # scheme defaults to 'http'.
@@ -49,4 +50,5 @@ sudo apt install prometheus -y
 # ストレージとかを設定する
 #lxc profile set  default  security.nesting "true"
 #
+COMMENTOUT
 
