@@ -38,3 +38,5 @@ network:
                 use-routes: false
 EOF
 sudo netplan apply
+
+apt remove snapd -y
