@@ -12,12 +12,11 @@ chmod -R +x ./module
 ./module/trema_install.sh
 ./module/send_syslog_setting.sh
 ./module/bash_setting.sh
+./module/clear.sh
 
 # 演習ファイルの配置
 sudo cp -r ./trema /workspace
 sudo chmod +x /workspace/*.sh
 sudo chmod +x /workspace/*.rb
 
-# tcpdumpの制限解除
-sudo apt install apparmor-utils -y
-sudo aa-complain /usr/sbin/tcpdump
+
