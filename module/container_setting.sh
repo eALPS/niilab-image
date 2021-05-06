@@ -39,4 +39,8 @@ network:
 EOF
 sudo netplan apply
 
-apt remove snapd -y
+sudo apt purge snapd -y
+
+# tcpdumpの制限解除
+sudo apt install apparmor-utils -y
+sudo aa-complain /usr/sbin/tcpdump
