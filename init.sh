@@ -1,6 +1,7 @@
 #!/bin/bash
 # スクリプトの場所に移動
 cd `dirname $0`
+sudo timedatectl set-timezone Asia/Tokyo
 #実行属性付与
 chmod -R +x ./module
 
