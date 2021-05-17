@@ -2,6 +2,7 @@
 
 #code server add extensions
 code-server --install-extension ms-ceintl.vscode-language-pack-ja
+code-server --install-extension ms-toolsai.jupyter
 code-server --install-extension emeraldwalk.runonsave
 
 # setting code server
