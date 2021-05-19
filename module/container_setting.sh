@@ -19,6 +19,9 @@ cat <<EOF | sudo tee /usr/local/bin/startup.sh
 #!/bin/bash
 iptables -P FORWARD ACCEPT
 sudo aa-complain /usr/sbin/tcpdump
+sysctl -w net.ipv6.conf.all.disable_ipv6=1
+sysctl -w net.ipv6.conf.default.disable_ipv6=1
+sysctl -w net.ipv6.conf.lo.disable_ipv6=1
 EOF
 sudo chmod +x /usr/local/bin/startup.sh
 sudo systemctl daemon-reload 
