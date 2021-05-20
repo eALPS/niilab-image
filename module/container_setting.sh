@@ -18,7 +18,12 @@ EOF
 cat <<EOF | sudo tee /usr/local/bin/startup.sh
 #!/bin/bash
 iptables -P FORWARD ACCEPT
+sudo apt purge snapd -y
+# tcpdumpの制限解除
+sudo apt update
+sudo apt install apparmor-utils -y
 sudo aa-complain /usr/sbin/tcpdump
+
 sysctl -w net.ipv6.conf.all.disable_ipv6=1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1
 sysctl -w net.ipv6.conf.lo.disable_ipv6=1
@@ -41,9 +46,12 @@ network:
                 use-routes: false
 EOF
 sudo netplan apply
-
+sudo snap remove lxd
+sudo snap remove core18
+sudo snap remove snapd
 sudo apt purge snapd -y
 
 # tcpdumpの制限解除
+sudo apt update
 sudo apt install apparmor-utils -y
 sudo aa-complain /usr/sbin/tcpdump
