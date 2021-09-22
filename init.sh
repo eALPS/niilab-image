@@ -17,8 +17,8 @@ chmod -R +x ./module
 ./module/clear.sh
 
 # 演習ファイルの配置
-sudo cp -r ./trema /workspace
-sudo chmod +x /workspace/*.sh
-sudo chmod +x /workspace/*.rb
+sudo cp -r ./trema /workspace/trema
+sudo chmod +x /workspace/trema/*.sh
+sudo chmod +x /workspace/trema/*.rb
 
 
