@@ -32,6 +32,10 @@ kernel.keys.maxbytes=2000000
 fs.aio-max-nr=524288
 net.core.netdev_max_backlog = 182757
 kernel.unprivileged_userns_clone = 1
+net.core.somaxconn = 10000
+net.ipv4.icmp_msgs_burst = 1000
+net.core.rmem_default=8388608
+net.core.rmem_max=8388608
 EOF"
 
 
@@ -46,7 +50,6 @@ ExecStart = /usr/local/bin/startup.sh
 Restart = no
 Type = simple
 RemainAfterExit=yes
-
 [Install]
 WantedBy = multi-user.target
 EOF

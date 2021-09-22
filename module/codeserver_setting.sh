@@ -4,6 +4,7 @@
 code-server --install-extension ms-ceintl.vscode-language-pack-ja
 code-server --install-extension ms-toolsai.jupyter
 code-server --install-extension emeraldwalk.runonsave
+code-server --install-extension ms-vscode.cpptools
 
 # setting code server
 # argv.json mod
@@ -19,12 +20,16 @@ cat <<EOF | tee ~/.local/share/code-server/User/settings.json
     "terminal.integrated.shell.linux": "/usr/bin/bash",
     "emeraldwalk.runonsave": {
         "commands": [
-
             {
                 "match": ".*",
                 "isAsync": true,
                 "cmd": "logger -t code-server[ealplus] \${file} save"
-            }
+            },
+            {
+                "match": ".*",
+                "isAsync": true,
+                "cmd": 'cd /workspace && git add -A > /dev/null 2>&1 && git commit -m "\${file} save" > /dev/null 2>&1 '
+            },
     ]
     
     },

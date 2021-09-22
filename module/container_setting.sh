@@ -10,7 +10,6 @@ ExecStart = /usr/local/bin/startup.sh
 Restart = no
 Type = simple
 RemainAfterExit=yes
-
 [Install]
 WantedBy = multi-user.target
 EOF
@@ -23,10 +22,15 @@ sudo apt purge snapd -y
 sudo apt update
 sudo apt install apparmor-utils -y
 sudo aa-complain /usr/sbin/tcpdump
-
 sysctl -w net.ipv6.conf.all.disable_ipv6=1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1
 sysctl -w net.ipv6.conf.lo.disable_ipv6=1
+sudo mkdir -p /workspace/submission
+cd /workspace
+sudo git init
+student_id=$(hostname | cut -d "-" -f 2)
+sudo git config --global user.name ${student_id}
+sudo git config --global user.email ${student_id}@shinshu-u.ac.jp
 EOF
 sudo chmod +x /usr/local/bin/startup.sh
 sudo systemctl daemon-reload 
