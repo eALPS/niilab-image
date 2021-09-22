@@ -1,11 +1,5 @@
 #!/bin/bash
 
-#code server add extensions
-code-server --install-extension ms-ceintl.vscode-language-pack-ja
-code-server --install-extension ms-toolsai.jupyter
-code-server --install-extension emeraldwalk.runonsave
-code-server --install-extension ms-vscode.cpptools
-
 # setting code server
 # argv.json mod
 mkdir -p ~/.local/share/code-server/User/
@@ -14,6 +8,14 @@ cat <<EOF | tee ~/.local/share/code-server/User/argv.json
     "locale": "ja"
 }
 EOF
+
+#code server add extensions
+code-server --install-extension ms-ceintl.vscode-language-pack-ja
+code-server --install-extension ms-toolsai.jupyter
+code-server --install-extension emeraldwalk.runonsave
+code-server --install-extension ms-vscode.cpptools
+
+
 # settings.json mod
 cat <<EOF | tee ~/.local/share/code-server/User/settings.json 
 {
