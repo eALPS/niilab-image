@@ -28,7 +28,7 @@ cat <<EOF | tee ~/.local/share/code-server/User/settings.json
             {
                 "match": ".*",
                 "isAsync": true,
-                "cmd": 'cd /workspace && git add -A > /dev/null 2>&1 && git commit -m "\${file} save" > /dev/null 2>&1 '
+                "cmd": "cd /workspace && git add -A  && git commit -m \"${file} save\"  "
             },
     ]
     
