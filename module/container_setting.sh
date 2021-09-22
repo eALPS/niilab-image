@@ -31,7 +31,6 @@ sudo git init
 student_id=$(hostname | cut -d "-" -f 2)
 sudo git config --global user.name ${student_id}
 sudo git config --global user.email ${student_id}@shinshu-u.ac.jp
-code-server --install-extension ms-ceintl.vscode-language-pack-ja
 EOF
 sudo chmod +x /usr/local/bin/startup.sh
 sudo systemctl daemon-reload 
