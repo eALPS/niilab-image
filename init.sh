@@ -13,13 +13,17 @@ chmod -R +x ./module
 ./module/trema_install.sh
 ./module/send_syslog_setting.sh
 ./module/bash_setting.sh
+./module/c_program.sh
 ./module/clear.sh
 
 # 演習ファイルの配置
 sudo cp -r ./trema /workspace/trema
 sudo chmod +x /workspace/trema/*.sh
 sudo chmod +x /workspace/trema/*.rb
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 83f2b0886b3d38264a2b8da615e6e120c996633d
 
 

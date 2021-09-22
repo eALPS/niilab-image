@@ -50,7 +50,6 @@ ExecStart = /usr/local/bin/startup.sh
 Restart = no
 Type = simple
 RemainAfterExit=yes
-
 [Install]
 WantedBy = multi-user.target
 EOF
