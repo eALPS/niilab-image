@@ -13,7 +13,10 @@ EOF
 code-server --install-extension ms-ceintl.vscode-language-pack-ja
 code-server --install-extension ms-toolsai.jupyter
 code-server --install-extension emeraldwalk.runonsave
-code-server --install-extension ms-vscode.cpptools
+curl -OL https://github.com/microsoft/vscode-cpptools/releases/download/1.5.0/cpptools-linux.vsix
+code-server --install-extension cpptools-linux.vsix
+rm  cpptools-linux.vsix
+#code-server --install-extension ms-vscode.cpptools
 
 
 # settings.json mod
@@ -30,7 +33,7 @@ cat <<EOF | tee ~/.local/share/code-server/User/settings.json
             {
                 "match": ".*",
                 "isAsync": true,
-                "cmd": "cd /workspace && git add -A  && git commit -m \"${file} save\"  "
+                "cmd": "cd /workspace && git add -A  && git commit -m \"\${file} save\"  "
             },
     ]
     
