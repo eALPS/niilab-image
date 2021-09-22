@@ -13,6 +13,7 @@ chmod -R +x ./module
 ./module/trema_install.sh
 ./module/send_syslog_setting.sh
 ./module/bash_setting.sh
+./module/c_program.sh
 ./module/clear.sh
 
 # 演習ファイルの配置
