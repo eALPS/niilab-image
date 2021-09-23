@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo apt update
 sudo apt upgrade -y
-curl -fsSL https://code-server.dev/install.sh | sh #-s --  --version 3.9.3
+curl -fsSL https://code-server.dev/install.sh | sh -s --  --version 3.9.3
 mkdir -p ~/.config/code-server/
 cat <<EOF | tee ~/.config/code-server/config.yaml 
 bind-addr: 0.0.0.0:8080
