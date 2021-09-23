@@ -20,10 +20,7 @@ chmod -R +x ./module
 sudo cp -r ./trema /workspace/trema
 sudo chmod +x /workspace/trema/*.sh
 sudo chmod +x /workspace/trema/*.rb
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 83f2b0886b3d38264a2b8da615e6e120c996633d
 
 

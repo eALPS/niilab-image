@@ -25,10 +25,6 @@ sudo aa-complain /usr/sbin/tcpdump
 sysctl -w net.ipv6.conf.all.disable_ipv6=1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1
 sysctl -w net.ipv6.conf.lo.disable_ipv6=1
-<<<<<<< HEAD
-
-=======
->>>>>>> 83f2b0886b3d38264a2b8da615e6e120c996633d
 sudo mkdir -p /workspace/submission
 cd /workspace
 sudo git init
