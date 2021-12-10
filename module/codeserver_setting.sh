@@ -2,7 +2,7 @@
 
 
 #code server add extensions
-code-server --install-extension ms-ceintl.vscode-language-pack-ja --force
+#code-server --install-extension ms-ceintl.vscode-language-pack-ja --force
 #code-server --install-extension ms-toolsai.jupyter --force
 code-server --install-extension emeraldwalk.runonsave --force
 #curl -OL https://github.com/microsoft/vscode-cpptools/releases/download/1.5.0/cpptools-linux.vsix
